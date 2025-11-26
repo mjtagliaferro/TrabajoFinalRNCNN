@@ -1,0 +1,1 @@
+Parámetros correspondientes al modelo 2.
