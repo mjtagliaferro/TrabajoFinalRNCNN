@@ -3,7 +3,7 @@ Para maximizar el accuracy en la validación se agregó, en primer lugar, Batch 
 
 También se incorporó la transformación ShiftScaleRotate() como parte del data augmentation. Esta técnica desplaza, escala y rota las imágenes de forma aleatoria, aumentando la variabilidad del conjunto de datos de entrenamiento. Al exponer al modelo a imágenes modificadas en posición, orientación y tamaño, se evita que aprenda patrones excesivamente específicos; reduciendo el riesgo de overfitting y mejorando la accuracy sobre datos no vistos. El data augmentation se complementó, además, con transformaciones como Horizontal Flip, Vertical Flip y Random Brightness/Contrast.
 
-Por otro lado, se utilizó Early Stopping con una paciencia de cinco épocas para detener automáticamente el entrenamiento cuando el accuracy de validación dejara de mejorar. Aunque no incrementa directamente el accuracy, evita el sobreentrenamiento y garantiza que el modelo conserve su mejor versión durante el proceso de optimización.
+Por otro lado, se utilizó Early Stopping con una paciencia de cinco épocas para detener automáticamente el entrenamiento cuando el accuracy de validación dejara de mejorar. Aunque esta implementación no incrementa directamente el accuracy, evita el sobreentrenamiento y garantiza que el modelo conserve su mejor versión durante el proceso de optimización.
 
 De esta manera, se obtuvieron 3 modelos con accuracy en validación mayor al 61%. Dentro de estos, el segundo modelo implementado mostró las mejores métricas, alcanzando un accuracy del 65,19% durante la validación y del 73,17% en el entrenamiento. Asimismo, la loss para este modelo en validación resultó igual a 0.97. Las curvas correspondientes se visualizan a continuación.
 
